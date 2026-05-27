@@ -19,11 +19,7 @@ jobs:
           - platform: x64
             msbuild_platform: x64
             output_dir: x64\Release
-            artifact_name: bcrypt_x64.dll
-          - platform: x86
-            msbuild_platform: Win32
-            output_dir: Release
-            artifact_name: bcrypt_x86.dll
+            artifact_name: bcrypt.dll
 
     steps:
       - name: Checkout
@@ -75,8 +71,7 @@ jobs:
             ### Downloads
             | File | Architecture |
             |------|-------------|
-            | `bcrypt_x64.dll` | 64-bit (x64) |
-            | `bcrypt_x86.dll` | 32-bit (x86) |
+            | `bcrypt.dll` | 64-bit (x64) |
 
             Drop the appropriate DLL next to the target application, renamed to `bcrypt.dll`.
           files: artifacts/*
