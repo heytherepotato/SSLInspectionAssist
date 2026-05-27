@@ -1,69 +1,50 @@
-# Prerequisites
-*.d
+# Visual Studio build artifacts
+.vs/
+*.user
+*.suo
+*.aps
+*.ncb
+*.opendb
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Build output directories
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
 
-# Precompiled Headers
-*.gch
+# However, keep the vendored MinHook static libraries that are checked in
+# (they are in bcrypt/ directly, not under a build output folder, so the
+# above x64/ rule won't affect them)
+
+# Compiled output
+*.exe
+*.pdb
+*.ilk
+*.iobj
+*.ipdb
+*.idb
+*.tlog
+*.lastbuildstate
+*.recipe
+*.FileListAbsolute.txt
+*.log
+
+# Precompiled headers (generated, not vendored)
 *.pch
 
-# Linker files
-*.ilk
+# Linker export files (generated)
+*.exp
 
-# Debugger Files
-*.pdb
+# NuGet
+packages/
+*.nupkg
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
-build/
-Build/
-build-*/
-
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
-
-# Temporary files
-*.tmp
-*.log
-*.bak
-*.swp
-
-# vcpkg
-vcpkg_installed/
-
-# debug information files
-*.dwo
-
-# test output & cache
-Testing/
-.cache/
+# Windows
+Thumbs.db
+desktop.ini
