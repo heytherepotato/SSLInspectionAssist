@@ -1,0 +1,2 @@
+#define BCRYPT_API __declspec(dllexport)
+#define BCRYPT_API __declspec(dllimport)
