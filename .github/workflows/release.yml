@@ -41,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.artifact_name }}
-          path: ${{ matrix.artifact_name }}
+          path: ${{ matrix.output_dir }}\bcrypt.dll
           if-no-files-found: error
 
   release:
