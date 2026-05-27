@@ -1,4 +1,4 @@
-﻿// bcrypt.cpp : CA bundle patch + connect hook + bcrypt proxy DLL.
+// bcrypt.cpp : CA bundle patch + connect hook + bcrypt proxy DLL.
 //
 // Workflow:
 //   1. Drop bcrypt.dll next to an app that searches for it in its own folder.
@@ -220,9 +220,8 @@ static void PatchCABundle() {
         RingLog("[bundle] scanning image (discovery mode)");
     }
 
-    // Load mitmproxy CA cert from the DLL directory.
     char certPath[MAX_PATH];
-    sprintf_s(certPath, sizeof(certPath), "%s\\mitmproxy-ca-cert.pem", g_dllDir);
+    sprintf_s(certPath, sizeof(certPath), "%s\\ca-cert.pem", g_dllDir);
     HANDLE hF = CreateFileA(certPath, GENERIC_READ, FILE_SHARE_READ,
                             NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (hF == INVALID_HANDLE_VALUE) {
